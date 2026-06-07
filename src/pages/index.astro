@@ -1,11 +1,135 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const institution = "Kalam Education";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Under Maintenance</title>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#d8c8a8;
+    font-family:"Courier New", monospace;
+    padding:20px;
+  }
+
+  .paper{
+    width:900px;
+    max-width:100%;
+    min-height:600px;
+
+    background:
+      repeating-linear-gradient(
+        white,
+        white 31px,
+        #c8d7ff 32px
+      );
+
+    border-radius:8px;
+    box-shadow:
+      0 15px 40px rgba(0,0,0,.25);
+
+    position:relative;
+    padding:80px 70px;
+  }
+
+  .paper::before{
+    content:"";
+    position:absolute;
+    left:45px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#ff7b7b;
+  }
+
+  h1{
+    font-size:3rem;
+    color:#2d2d2d;
+    margin-bottom:30px;
+    transform:rotate(-1deg);
+  }
+
+  p{
+    font-size:1.3rem;
+    line-height:2;
+    color:#444;
+  }
+
+  .title{
+    font-size:1.6rem;
+    margin-bottom:40px;
+    color:#7a4f1d;
+    font-weight:bold;
+  }
+
+  .sign{
+    margin-top:60px;
+    font-size:1.2rem;
+    font-style:italic;
+  }
+
+  .pin{
+    position:absolute;
+    top:20px;
+    right:25px;
+    width:22px;
+    height:22px;
+    background:#c0392b;
+    border-radius:50%;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+  }
+
+  .coffee{
+    position:absolute;
+    bottom:40px;
+    right:40px;
+    width:120px;
+    height:120px;
+    border:6px solid rgba(120,80,40,.15);
+    border-radius:50%;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="paper">
+  <div class="pin"></div>
+
+  <div class="title">{institution}</div>
+
+  <h1>📖 Dear Students,</h1>
+
+  <p>
+    Our website is currently under maintenance.
+    We are adding new features and improving the
+    learning experience for all students.
+  </p>
+
+  <p>
+    Please visit again soon.
+  </p>
+
+  <div class="sign">
+    — Team Kalam Education
+  </div>
+
+  <div class="coffee"></div>
+</div>
+
+</body>
+</html>
